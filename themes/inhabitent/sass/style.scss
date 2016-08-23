@@ -49,9 +49,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 @import "variables";
 @import "mixins";
-
-// CSS included in style.css.
-
 @import "normalize";
 @import "fonts";
 @import "typography";
@@ -62,4 +59,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "widgets";
 @import "content";
 @import "media";
+@import "footer.php";
+@import "front-page";
+@import "products.scss"
 @import "page-templates";
+@import "variabe.scss";
+@import "header.scss";
+@import "fonts.scss";
+@import "front-page-shop.scss"

@@ -1,0 +1,28 @@
+.about-hero-image{
+ 	display: flex;
+   justify-content: center;
+  align-items: center;
+ 	&:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+          height: 0;+    }+  h2{+  	font-family:$mirreweather_bold;+  	color: $color__white;
+  	font-size: 3rem;
+   }
+ }
+
+ .about-page{
++padding: 20px 150px;
+   h3{
+     text-align: center;
+     font-family:$mirreweather_bold;
+     font-size: 2rem;
+     text-transform: uppercase;
+     color: black;
+     letter-spacing: 3px;
+   }
+   p{
+     font-family: $mirreweather_light;
+   }
+ }
