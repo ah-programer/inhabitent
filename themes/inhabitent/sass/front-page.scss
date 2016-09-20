@@ -9,57 +9,105 @@
   text-align:center;
   margin:auto;
   padding:0;
+  justify-content: center;
+  display: flex;
+  }
+  .tent-logo a {
+
+    text-indent: 100%;
+    margin: 0;
+    background-size: 50px 33px;
+
   }
 
+// Product Type Links (Do, Eat, Sleep, Wear)
+
+  .shop-stuff {
+    // padding-top: 50px;
+    display: inline-flex;
+    box-sizing: border box;
+    margin-top: 30px;
+    justify-content: space-between;
+    max-width: inherit;
+
+
+    }
+
+.shop-stuff-container {
+  width: 1120px;
+  margin-left:  auto;
+  margin-right: auto;
+
+}
+
 .product_icon {
-// font-family: 'merri.weather' sans-serif;
-display:flex;
-border-top-width: 5px;
-padding:.75rem;
-max-width: 23.5%;
-flex-direction: column;
-justify-content: space-between;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 1 23.5%;
+  padding: .75rem;
+  max-width: 23.5%;
+  border: 1px solid #e1e1e1;
+  border-top-width: 5px;
+  text-align: center;
+}
 
- }
+.product_icon img {
+  width: 80px;
 
+}
+
+.product_icon p {
+  display: block;
+  margin: 1.5rem;
+  // text-align: center;
+  font-family: 'merriweather', sans-serif;
+}
+
+
+.product_type {
+  //  flex: 0 1 23%;
+  border: border_solid;
+  border-top-width: 5px;
+  text-align: center;
+
+
+}
 .product_type &:hover {
   border-color:#d99054;
 }
-.product_type &:hover{
-  // border-type.product_type-block img{---
-width:60px;
-height:60;
-
-  }
-.product_type img {
-    width:70px;
-  }
-
-
-.shop-stuff {
-  display: flex;
-  text-align: center;
-  // width:600px;
-  border: solid  1px regba(0,0,0.1);
-  border-top-width: 5px;
+.product_icon img {
+  flex: 0 1 23%;
 }
 
-  &:hover {
-    transition: 1s;
-    border-color: orange;
-  }
 
-  img{
-    padding: .75rem;
-  }
+  .journal-page {
+    border: 1px solid #e1e1e1;
 
-h1 {
-  text-align: center;
-  font-family: 'merri.weather' sans-serif;
-  }
-
+}
 .journal-container{
-  display: flex;
+  display: inline-flex;
+  justify-content: space-between;
+  border-top-width: 5px;
+  padding-bottom: 17px;
+  padding-left: 10px;
+
+}
+a {
+  text-decoration: none;
+
+}
+.moretag {
+  border:1px solid #000;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: .75rem 1.5rem;
+  color: #000;
+  &hover  {
+  background-color: #248a83;
+
+  }
+
 }
 
 h2 {
@@ -67,9 +115,10 @@ text-align: center;
 
 }
 
-.tent-logo a {
-  height: 33px;
-  text-indent: 100%;
-  margin: 0;
-  background-size: 50px 33px;
+.adventure-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 25px auto 50px auto;
+
 }

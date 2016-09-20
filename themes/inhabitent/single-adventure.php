@@ -23,18 +23,9 @@ get_header(); ?>
 
          </header><!-- .entry-header -->
 
-         <div class="entry-content">
-         <?php echo CFS()->get( 'product_price' ); ?>
+         <div class="adventures-title">
+         
              <?php the_content(); ?>
-<div class="bloke">
-  <p><i class="fa fa-envelope"></i>info@inhabitent.com</p>
-  <p><i class="fa fa-phone"></i>77-456-7891</p>
-  <p>
-    <i class="fa fa-facebook-official"></i>
-    <i class="fa fa-twitter"></i>
-    <i class="fa fa-google-plus"></i>
-  </p>
-</div>
          </div><!-- .entry-content -->
 
      </article><!-- #post-## -->

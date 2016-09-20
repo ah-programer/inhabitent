@@ -15,8 +15,9 @@ textarea {
 
 /* Headings */
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4{
 	clear: both;
+
 }
 
 /* Copy */
@@ -35,6 +36,7 @@ blockquote {
 
 address {
 	margin: 0 0 $base__space-unit;
+	color:white;
 }
 
 pre {

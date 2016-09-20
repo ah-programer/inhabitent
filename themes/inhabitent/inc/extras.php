@@ -49,17 +49,18 @@ add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 
 /* Adjusting archive page loop*/
 
-function inhabitent_modify_product_archive_query(){
+function inhabitent_modify_product_archive_query( $query ){
 
-	if (is_-post_type_archive( 'prouduct' ) && !is_admin() && $query->is_main_query() ){
+	if (is_post_type_archive( 'product' ) || is_tax('product_type') && !is_admin() &&
+	$query->is_main_query() ) {
 
-		$query->set( 'posts-per-page', 16);
+		$query->set( 'posts_per_page', 16);
 		$query->set('order', 'ASC');
 		$query->set('orderby', 'title');
 	}
 	}
 
-	add_action ('pre_get-posts', 'inhabitent_modify_product_archive_query');
+	add_action ('pre_get_posts', 'inhabitent_modify_product_archive_query');
 
 
 //for about images
@@ -69,10 +70,19 @@ function inhabitent_hero_imags_style(){
 		return;
 	}
 
-	$imageUrl = cfs()-> get ( 'about_banner_image');
+	$imageUrl = CFS()->get( 'header_image' );
 
 	if(!$imageUrl){
+
 		return;
 	}
+			$custom_css = "
+			.about-header {
+				background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+				url($imageUrl) center center no-repeat;
+				background-size: cover;
 
+			}";
+			wp_add_inline_style('red-starter-style', $custom_css);
 }
+add_action('wp_enqueue_scripts','inhabitent_hero_imags_style');

@@ -1,0 +1,44 @@
+// .about-header {
+//
+//    height: 100vh;
+//
+//
+//  }
+//  .about-page  {
+//    font: 40px;
+//      padding: 20px 150px;
+//
+// h2{
+//     font-family:  'mirreweather_bold';
+//     font-size: 3rem;
+//     color:black;
+//
+//    }
+
+ .about-header {
+    display: flex;
+    justify-content: center;
+   align-items: center;
+   height: 100vh;
+
+   h2 {
+     text-transform: uppercase;
+     color: white;
+      font-size: 3rem;
+      max-width: 800px;
+    }
+  }
+
+  .about-pagecontainer {
+   max-width: 1120px;
+   margin-left: auto;
+   margin-right: auto;
+   padding-bottom: 30px;
+
+    .about-paragraphs {
+      max-width: 800px;
+      margin: 3rem auto;
+    }
+
+
+  }

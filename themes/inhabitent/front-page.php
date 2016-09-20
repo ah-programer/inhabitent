@@ -10,43 +10,30 @@ get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
 
-		<!-- this is for home page container  ---->
+		<!-- this is for home page c  ---->
 
 		<section class="hero-page">
 
 			<img src="<?php bloginfo('template_directory'); ?>/images/logos/inhabitent-logo-full.svg" alt=""/>
 </section>
-		<!-- for the shope page container  -->
-
-		<h1> shop stuff</h1>
-
-		<section class="shop-stuff">
-
+		<!-- for the shope page   -->
+	<section class="shop-stuff-container ">
+		<h2> shop stuff</h2>
 			<?php $product_types = get_terms( array( 'taxonomy' =>'product-type') );?>
-
-
-
-		<?php foreach ( $product_types as $product_type) : ?>
+			<?php foreach ( $product_types as $product_type) : ?>
 			<div class="product_icon">
 				<?php echo $product_type->name; ?>
-				<?php echo $product_type->slug; ?>
-
-				<img src="<?php echo get_template_directory_uri() . "/images/product-type-icons/".$product_type->slug.".svg" ?>" alt="icon">
-
-		<p>
-			<?php echo $product_type->description; ?>
-		</p>
-		<a href=" <?php echo get_term_link($product_type, 'product-type') ?> "><?php echo $product_type->name; ?> &nbsp;stuff</a>
-
- </div>
- <?php endforeach; ?>
+				<img src="<?php echo get_template_directory_uri() . "/images/product-type-icons/".$product_type->slug.".svg" ?>" alt="icon"/>
+					<p><?php echo $product_type->description; ?></p>
+				<a href=" <?php echo get_term_link($product_type, 'product-type') ?> " class="solid-button"> <?php echo $product_type->name; ?> &nbsp;stuff</a>
+ 		</div>
+ 		<?php endforeach; ?>
  </section>
-
 
 		<!-- for the journal page  -->
 	<h2> INHABITENT JOURNAL</h2>
 
-		<div class="front-page-products"> </div>
+		<div class="front-page-products">
 
 		<ul class="journal-container">
 
@@ -67,9 +54,9 @@ get_header(); ?>
 					</div>
 
 					<div class="journal-information">
-						<span>
+						<!-- <span> -->
 	             <?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?>
-	           </span>
+	           <!-- </span> -->
 	           <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 	           <a class="moretag" href="<?php the_permalink(); ?>">Read Entry</a>
 	        </div>
@@ -77,7 +64,30 @@ get_header(); ?>
 	 <?php
 			endforeach;
 			wp_reset_postdata() ?>
+			</div>
 		</ul>
+
+		<div class="adventure-container">
+			<?php
+   $args = array( 'post_type' => 'adventure', 'order' => 'ASC' );
+   $adventures = new WP_Query( $args ); // instantiate our object
+?>
+<?php if ( $adventures->have_posts() ) : ?>
+   <?php while ( $adventures->have_posts() ) : $adventures->the_post(); ?>
+
+			<h3>
+				<?php the_post_thumbnail(); ?>
+
+			<a href="<?php the_permalink(); ?>">
+			<?php the_title(); ?></a>
+		</h3>
+
+   <?php endwhile; ?>
+<?php else : ?>
+      <h2>Nothing found!</h2>
+<?php endif; ?>
+
+		</div>
 
  </div>
 

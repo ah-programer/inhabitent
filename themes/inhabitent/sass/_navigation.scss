@@ -7,6 +7,7 @@
 a {
 	color: $color__link;
 
+
 	&:visited {
 		color: $color__link-visited;
 	}
@@ -24,27 +25,45 @@ a {
 	}
 }
 
+a.solid-button {
+	color: white;
+	display: block;
+	background: $color__link-visited;
+	padding: .75rem 1.5rem;
+	border: none;
+	line-height: 1rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+	cursor:pointer;
+}
+
+a.clear-button {
+
+}
+
+a.white-button {
+
+}
+
 /* Menus */
 
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+
+	display: flex;
+	width: auto;
+ 	justify-content: space-between;
+	text-transform: uppercase;
+
 
 	ul {
-		display: none;
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
 
+		list-style: none;
+
+		padding-left: 0;
+}
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: $base__space-unit;
-			left: -999em;
-			z-index: 99999;
+
 
 			ul {
 				left: -999em;
@@ -55,11 +74,12 @@ a {
 				&:hover > ul,
 				&.focus > ul {
 					left: 100%;
+
 				}
 			}
 
 			a {
-				width: 200px;
+
 			}
 
 			:hover > a,
@@ -79,6 +99,7 @@ a {
 	li {
 		float: left;
 		position: relative;
+		margin: 0 1rem;
 
 		&:hover > a,
 		&.focus > a {
@@ -87,12 +108,15 @@ a {
 	a {
 		display: block;
 		text-decoration: none;
+		justify-content:space-between;
+		text-align: right;
+
 	}
 
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a {
-	}
+
 }
 
 /* Small menu. */
@@ -103,7 +127,7 @@ a {
 
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
-		display: none;
+		display: block;
 	}
 	.main-navigation ul {
 		display: block;

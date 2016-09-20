@@ -1,22 +1,42 @@
-.entry-contant {
-
-  margin-bottom: 35px:
-}
-
-
 .site-footer {
  background: url(../../images/dark-wood@2x.png);
- background-size: 512px 512px;
-color: $__green;
-text-decoration:  none;
- border-color: white;
- min-height: 350px;
- width:100%;
- color: #2f1339;
- position: absolute;
+ // display: inline-flex;
+ align-items: center;
+ // align-self: center;
+ height: auto;
+ // flex-direction: column;
+ color: white;
+ // width:100%;
+ }
 
+.site-info{
+// display: inline-flex;
+font-size: 20px;
+font-family: 'mirreweather', sans-serif;
+color: white;
+justify-content:space-between;
+flex-direction: column;
+width:100%;
+}
+&hover p {
+  color:white;
+}
+.block {
+  // display: inline;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer-block h4 {
+  color: #rgb(217, 144, 84);
 }
 
-.contact-info a {
-  font-family: 'mirreweather', sans-serif;
+.inhabitent-text {
+  // justify-content: flex-end;
+  font-size: 30px;
+  text-align: right;
+  padding-top: 50px;
+
+}
+.copyright{
+text-align: center;
 }

@@ -1,17 +1,41 @@
+<?php
+/**
+ * The template for displaying about template.
+ *
+ * @package RED_Starter_Theme
+ * Template Name: About Template
+ */
 
-   }
-       $imageUrl = CFS()->get( 'about_banner_image' );
+get_header(); ?>
 
-       if(!$imageUrl){
-         return;
-       }
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
 
-       $custom_css = "
-               .about-hero-image{
-                 background: linear-gradient(180deg,rgba(0,0,0,.4) 0,rgba(0,0,0,.4)),#969696 url({$imageUrl}) no-repeat bottom;
-                 background-size: cover;
-                 height: 100vh;
-               }";
-       wp_add_inline_style( 'inhabitent-style', $custom_css );
-}
-add_action( 'wp_enqueue_scripts', 'inhabitent_inline_styles_method' );
+  	<?php while ( have_posts() ) : the_post(); ?>
+
+
+        	<header class="about-header">
+        		  <h2><?php the_title(); ?><h2>
+        	</header><!-- .entry-header -->
+
+          <div class="about-page container">
+
+               <h2>Our Story</h2>
+              <?php  echo CFS()->get( 'our_story' ); ?>
+
+              <h2>Our Team</h2>
+                <?php  echo CFS()->get( 'our_team' ); ?>
+
+
+
+        <?php endwhile;  ?>
+
+        	</div><!-- .entry-content -->
+
+
+
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+<?php get_footer(); ?>
