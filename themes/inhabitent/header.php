@@ -18,7 +18,7 @@
 	</head>
 
 	<body <?php body_class(); ?>>
-	<div id="page" class="header-site">
+	<div id="page" class="hfeed site">
 			<a class="skip-link screen-reader-text" href="#content"><?php esc_html( 'Skip to content' ); ?></a>
 
 			<header id="masthead" class="site-header" role="banner">
@@ -27,11 +27,10 @@
 
 					<!-- the logo add here  --->
 
-					<div class="tent-logo">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-								<img < src="<?php echo get_template_directory_uri();?>/images/logos/inhabitent-logo-tent.svg" alt="" />
+						<a class="tent-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+								<!-- <img src="<?php echo get_template_directory_uri();?>/images/logos/inhabitent-logo-tent.svg" alt="" /> -->
 						</a>
-					</div>
+
 
 					</div><!-- .site-branding -->
 
@@ -40,9 +39,9 @@
 						<i class="fa fa-search toggle-search" aria-hidden="true"></i>
 						<div class="header-search">
 							<?php  get_search_form(); ?>
-
+						</div>
 				</nav><!-- #site-navigation -->
-
+					</div>
 			</header><!-- #masthead -->
-		</div>
-		</div id="content" class="site-content">
+
+		<div id="content" class="site-content">

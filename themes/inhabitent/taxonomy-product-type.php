@@ -11,15 +11,15 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
+			<header class="product-header">
             <h2><?php single_term_title(); ?></h2>
-            <p><?php echo term_description(); ?></p>
+            <?php echo term_description(); ?>
 
 			</header><!-- .page-header -->
 
-<div class=("cpt-grid")>
+<div class="product-grid">
 			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : ?>
+			<?php while ( have_posts() ) : the_post();?>
 
 
 
@@ -52,5 +52,4 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

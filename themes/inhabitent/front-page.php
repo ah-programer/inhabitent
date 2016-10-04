@@ -67,28 +67,65 @@ get_header(); ?>
 			</div>
 		</ul>
 
-		<div class="adventure-container">
-			<?php
-   $args = array( 'post_type' => 'adventure', 'order' => 'ASC' );
-   $adventures = new WP_Query( $args ); // instantiate our object
-?>
-<?php if ( $adventures->have_posts() ) : ?>
-   <?php while ( $adventures->have_posts() ) : $adventures->the_post(); ?>
+		    <h2> LATEST ADVENTURE </h2>
+		<section class="adventure-posts">
+		 <div class="container">
 
-			<h3>
-				<?php the_post_thumbnail(); ?>
+		 <?php
+			$args = array( 'post_type' => 'adventure',
+										 'order' => 'ASC',
+										 'posts_per_page' => 4);
+			$adventure_posts = get_posts( $args ); // returns an array of posts
+		?>
+		<!-- set a counter variable, to display the first post differently -->
+		<?php $count = 0; ?>
+		<?php foreach ( $adventure_posts as $post ) : setup_postdata( $post ); ?>
+			<?php if ($count === 0): ?>
+				<div class="outer left">
+					<div class="inner">
+						<div class="adventure-image">
+							<?php if ( has_post_thumbnail() ) : ?>
+							 <?php the_post_thumbnail( 'full' ); ?>
+						 <?php endif; ?>
+						</div>
 
-			<a href="<?php the_permalink(); ?>">
-			<?php the_title(); ?></a>
-		</h3>
 
-   <?php endwhile; ?>
-<?php else : ?>
-      <h2>Nothing found!</h2>
-<?php endif; ?>
+						<div class="adventure-info">
+							<h3 class="adventure-entry"><a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a></h3>
+						 <a class="btn" href="<?php the_permalink(); ?>" class="button transparent">Read More</a>
+						</div>
 
-		</div>
 
- </div>
+				 </div>
+				</div> <!-- end outer left (largest square adventure post)-->
+				<div class="outer right">
 
+				<?php else: ?>
+					<div class="inner">
+
+						<div class="adventure-image">
+							<?php if ( has_post_thumbnail() ) : ?>
+							 <?php the_post_thumbnail( 'full' ); ?>
+						 <?php endif; ?>
+						</div>
+
+						<div class="adventure-info">
+						 <h3 class="adventure-entry"><a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a></h3>
+							<a href="<?php the_permalink(); ?>" class="button-transparent">Read More</a>
+					 </div>
+
+				 </div>
+
+			<?php endif; ?>
+			<?php $count++; ?>
+		<?php endforeach; wp_reset_postdata();?>
+
+			 </div> <!-- end outer right (3 smaller adventure posts) -->
+		 </div> <!-- end container -->
+
+		 <a href="<?php echo get_post_type_archive_link('adventure'); ?>" class="button-reverse">More Adventures</a>
+	 </section>
+
+ </main><!-- #main -->
+</div><!-- #primary -->
 <?php get_footer(); ?>

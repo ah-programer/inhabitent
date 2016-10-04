@@ -1,49 +1,79 @@
-.page-title {
-  font-size: 40px;
-  clear: both;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-family: 'novecento' sans-serif;
-}
 
-.product-image img {
+  .product-header {
+    text-align: center;
+    clear: both;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'merriweather' sans-serif;
+    border-bottom: 1px dashed #c8c8c8;
+    margin-bottom: 3rem;
+    text-align: center;
+
+  }
+
+
+
+.product-image {
   height: 200px;
   object-fit: cover;
+
 }
+
 
 .product-grid {
-  margin-bottom: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
 
 }
 
-.product-grid-item {
+  .product-item {
   margin-bottom: 1.5rem;
   border: 1px solid #e1e1e1;
   max-width: 23%;
 }
 
-.product-info {
-  display: flex;
+  .product-meta {
+
   text-align: center;
+  display: flex;
   font-weight: normal;
-  justify-content: center;
+  justify-content:space-between;
   font-family: 'merriweather' sans-serif;
+
+
+  h2 {
+  font-size: 15px;
+  margin: 0;
+  
+  }
+
+  a {
+    color: black;
+
+  }
+
 
 }
 
-.product-type-wrapper{
-  display: flex;
-  margin-bottom: 20px;
+  .product-type-wrapper{
+
+  margin-bottom: 25px;
 }
 
 .product-type-wrapper p {
   margin: 10px 30px;
 }
 
-.container {
+.post-type-archive-product .site-main {
   margin-top: 40px;
   margin-right: auto;
   margin-left: auto;
@@ -105,6 +135,24 @@
 	margin-bottom: 3rem;
 	}
 
+
+
+   ul {
+
+        font-family: 'novecento',sans-serif;
+        font-size: 19.2px;
+        font-size: 1.2rem;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        list-style-type: none;
+        margin-left: 0;
+        padding-left: 0;
+        text-transform: uppercase;
+        display: flex;
+   }
+
+
 // This is for the social-buttons
 .social-buttons span {
 	font-weight: 400;
@@ -139,45 +187,3 @@
   transform: translate(-50%,-52%);
   width: auto;
 }
-
-
-
-
-
-
-
-
-
-
-
-// .product_type a{
-//     background:#248a83;
-//     // border-radius:;
-//     border: none;
-//     color:#fff;
-//     cursor:pointer;
-//     font-family: "novecento",sans-serif;
-//     font-size:1rem;
-//     font-size: 16px;
-//     line-height: 1;
-//     padding:075rem 1.5rem;
-//     text-decoration: none;
-//     text-transform:uppercase;
-//     }
-// .product_type a:hover{
-//       background:#19625d;
-//     }
-// .product_type p{
-//       font-family: 'merriweather',sans-serif;
-//     }
-// .product-imagef {
-//   flex-direction: row;
-//   justify-content: space-between;
-//   display: flex;
-//
-// }
-// .li {
-//   display: flex;
-//   text-align: center;
-//   flex-direction: row;
-// }

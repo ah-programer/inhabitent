@@ -12,19 +12,19 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="archive-header">
+			<header class="adventure-header">
 				<?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 
 				?>
 			</header><!-- .page-header -->
-
+			<div class="adventure-page">
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-				<div class="advenutre-page">
 
-					<div class="advenutre-wrapper"
-					<a herf="<?php the_permalink(); ?>">
+
+					<div class="adventure-wrapper">
+					<a href="<?php the_permalink(); ?>">
 
 						<?php if ( has_post_thumbnail() ) : ?>
         			<?php the_post_thumbnail( 'large' ); ?>
@@ -32,12 +32,14 @@ get_header(); ?>
 
 						<div class="advenutre-info">
 
-        		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+	        		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-<herf="<?php the_permalink(); ?>" class="botton transparent">Read More</a>
-</div>
- </div>   <!-- end advenutre wrapper -->
- </div>
+							<a href="<?php the_permalink(); ?>" class="botton transparent">Read More</a>
+						</div>
+					</a>
+ 				</div>  <!-- end advenutre wrapper -->
+			<?php endwhile; ?>
+ 		</div> <!-- end advenutre grid -->
 
 
 		<?php else : ?>
@@ -49,5 +51,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<!-- <?php get_sidebar(); ?> -->
+
 <?php get_footer(); ?>

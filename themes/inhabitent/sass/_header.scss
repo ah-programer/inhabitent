@@ -1,0 +1,81 @@
+.admin-bar .site-header{
+  margin-top: 35px;
+
+}
+
+
+// .site-header{
+.site-header {
+ background-color: transparent;
+ z-index: 3;
+ position: absolute;
+ top: 0;
+ width:100%;
+
+ .container {
+   display: flex;
+   justify-content: space-between;
+   width:1120px;
+   margin: 0 auto;
+ }
+}
+
+
+
+.site-branding {
+
+padding: .5rem 0;
+}
+.header-search {
+  fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+
+}
+input {
+  background: white;
+  border: none;
+  box-shadow: none;
+  display: none;
+  //toggled into view in search-bar.js
+}
+}
+
+
+.tent-logo  {
+  background: url(../../images/logos/inhabitent-logo-tent.svg) no-repeat;
+  background-size: 33px 50px;
+  height: 33px;
+  margin: 0;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  width: 50px;
+  display: block;
+
+  }
+.header-search {
+  display: flex;
+
+}
+
+/* header color on front page, about, single adventures */
+
+.home, .page-template-about, .single-adventure {
+  .site-header a {
+    color: white;
+
+    &:hover {
+      color: #f0e4d1;
+    }
+  }
+
+  .tent-logo {
+    background: url(../../images/logos/inhabitent-logo-tent-white.svg) no-repeat;
+    background-size: 50px 33px;
+    display: block;
+  }
+
+
+}

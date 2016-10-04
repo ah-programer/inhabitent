@@ -1,0 +1,53 @@
+
+.page, .blog, .single-post {
+
+  .site-content {
+    display: flex;
+    margin-top: 2rem;
+    width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .content-area {
+    width: 73%;
+    // background: yellow;
+    padding: 5%;
+    border-right: 1px solid #e1e1e1;
+  }
+
+  .widget-area {
+    width: 27%;
+    //  background: skyblue;
+
+  }
+
+  .site-header .container {
+      border-bottom: 1px solid #e1e1e1;
+  }
+}
+.entry-content h3 {
+  font-size: 30px;
+  text-align: center;
+
+
+}
+
+.home, .page-template-about {
+  .site-content {
+    width: 100%;
+    display: block;
+    margin: 0;
+    border: 0;
+
+  }
+
+  .content-area {
+    width: 100%;
+    padding: 0;
+    background: transparent;
+  }
+
+  .site-header .container {
+      border-bottom: 0;
+  }
+}

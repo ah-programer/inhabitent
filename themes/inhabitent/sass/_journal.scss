@@ -1,0 +1,43 @@
+.blog .entry-header, .single .entry-header {
+ position: relative;
+
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .entry-title {
+    position:absolute;
+    top: 0;
+    left: 0;
+    background-color: #248A83;
+    font-size: 2.5rem;
+    color:#fff;
+
+  }
+// .blog .p  {
+//   border: 1px solid #000;
+//     color: #000;
+// }
+
+
+
+
+
+  .entry-meta {
+    position: absolute;
+    bottom: 0;
+    right:0;
+    background-color: #248A83;
+    color: #fff;
+    font-size: 1.25rem;
+  }
+
+  a {
+     color:#fff;
+  }
+
+
+}

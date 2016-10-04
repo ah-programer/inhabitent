@@ -1,0 +1,67 @@
+.adventure-page {
+  display: flex;
+  border-bottom: 1px dashed #c8c8c8;
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content:space-between;
+  width: 1120px;
+  height: 100%;
+  flex-wrap: wrap;
+
+
+
+}
+
+ .adventure-header {
+  border-bottom: 1px dashed #c8c8c8;
+  margin-bottom: 3rem;
+  padding-bottom: 1.05rem;
+  text-align: center;
+  font-size: 25px;
+
+}
+.adventure-wrapper {
+  position: relative;
+  max-width: 49%;
+  margin: auto;
+  border: 10px solid white;
+  border-top-width: 15px;
+
+}
+
+
+
+ .advenutre-info {
+   position:absolute;
+   top: .25rem;
+   left: 0;
+   font-size: 1.5rem;
+   color:white;
+
+
+ }
+ .advenutre-info a {
+   color: #fff;
+
+&:hover {
+    color: #f0e4d1;
+ }
+
+ }
+.botton {
+  border: 1px solid #fff;
+  padding: .75rem 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-left: 10px;
+  font-size: 15px;
+
+
+
+    &:hover{
+    background-color: #248a83;
+    color: #fff;
+  }
+}

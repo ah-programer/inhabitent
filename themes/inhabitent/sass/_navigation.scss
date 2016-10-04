@@ -38,13 +38,13 @@ a.solid-button {
 	cursor:pointer;
 }
 
-a.clear-button {
-
-}
-
-a.white-button {
-
-}
+// a.clear-button {
+//
+// }
+//
+// a.white-button {
+//
+// }
 
 /* Menus */
 
@@ -101,17 +101,12 @@ a.white-button {
 		position: relative;
 		margin: 0 1rem;
 
+
 		&:hover > a,
 		&.focus > a {
 		}
 	}
-	a {
-		display: block;
-		text-decoration: none;
-		justify-content:space-between;
-		text-align: right;
 
-	}
 
 	.current_page_item > a,
 	.current-menu-item > a,

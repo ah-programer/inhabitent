@@ -96,9 +96,9 @@ class Inhabitent_Hours extends WP_Widget {
 
 		// Manipulate the widget's values based on their input fields
 		$title = empty( $instance['title'] ) ? '' : apply_filters( 'widget_title', $instance['title'] );
-			$title = empty( $instance['monday-friday'] ) ? '' : apply_filters( 'widget_title', $instance['monday_friday'] );
-				$title = empty( $instance['saturday'] ) ? '' : apply_filters( 'widget_title', $instance['saturday'] );
-					$title = empty( $instance['sunday'] ) ? '' : apply_filters( 'widget_title', $instance['sunday'] );
+		$monday_friday = empty( $instance['monday_friday'] ) ? '' : apply_filters( 'widget_title', $instance['monday_friday'] );
+		$saturday = empty( $instance['saturday'] ) ? '' : apply_filters( 'widget_title', $instance['saturday'] );
+		$sunday = empty( $instance['sunday'] ) ? '' : apply_filters( 'widget_title', $instance['sunday'] );
 		// TODO: other fields go here...
 
 		ob_start();
@@ -128,7 +128,7 @@ class Inhabitent_Hours extends WP_Widget {
 		$instance = $old_instance;
 
 		$instance['title'] = strip_tags( $new_instance['title'] );
-		$instance['monday-friday'] = strip_tags( $new_instance['monday_friday'] );
+		$instance['monday_friday'] = strip_tags( $new_instance['monday_friday'] );
 		$instance['saturday'] = strip_tags( $new_instance['saturday'] );
 		$instance['sunday'] = strip_tags( $new_instance['sunday'] );
 		//
@@ -149,7 +149,7 @@ class Inhabitent_Hours extends WP_Widget {
 			(array) $instance,
 			array(
 				'title' => 'My business hours',
-				'monday-friday' => '',
+				'monday_friday' => '',
 				'saturday'     => '',
 				'sunday'     =>'',
 			)

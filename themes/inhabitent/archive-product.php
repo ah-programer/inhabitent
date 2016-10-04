@@ -12,7 +12,7 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
+			<header class="product-header">
 				<?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 
@@ -29,9 +29,9 @@ get_header(); ?>
 
 			</header><!-- .page-header -->
 
-<div class=("cpt-grid")>
+<div class="product-grid" >
 			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
 
 
